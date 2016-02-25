@@ -43,7 +43,8 @@ git rev-parse --git-dir找到.git目录,里面有一个config文件
 ---------
 1.获取服务器主分支代码(master)
 ```
-https://github.com/shadowsocks/shadowsocks-libev/
+https://github.com/0x58594C/test.git
+git@github.com:0x58594C/test.git
 ```
 2.保存到自己的私有仓库(fork repository)
 ```
