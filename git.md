@@ -42,11 +42,14 @@ git rev-parse --git-dir找到.git目录,里面有一个config文件
 ###Flow
 ---------
 1.获取服务器主分支代码(master)
+![https_or_ssh](https://raw.githubusercontent.com/0x58594C/test/dev/image/https_ssh.png "HTTP or SSH")
 ```
 https://github.com/0x58594C/test.git
 git@github.com:0x58594C/test.git
 ```
+
 2.保存到自己的私有仓库(fork repository)
+![fork](https://raw.githubusercontent.com/0x58594C/test/dev/image/fork.png "Fork")
 ```
 click Fork 
 ```
