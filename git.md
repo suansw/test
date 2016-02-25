@@ -129,8 +129,18 @@ User C,
         branch, e.g.: pmCCCC
 如果B的branch依赖C的分支,但是最新的A master里面并没有合并C的分支,B如何做集成开发测试
 ```
-1.git remote add Bname git@github.com:Cname/project.git 添加C的fork仓库地址到B本地
+全部以B为视角
+1.git fork A的主分支到B的私人仓库
+
+2.git clone git@github.com:tommyx/test.git
+
+3.git remote add upstream git@github.com:x58594c/test.git 添加A的master仓库地址到B本地
+git remote add suansw git@github.com:suansw/test.git 添加C的仓库地址到B本地
 ![git remote add](https://raw.githubusercontent.com/0x58594C/test/dev/image/git_remote_add.png "remote add")
+
+4.git branch pmBBBB         新建一个分支,命名为pm011111.fix.display
+
+5.git commit -a             修改代码后,作一个提交,本地测试不通过,发现缺少了库,而C已经做完了库的开发
 
 2.git fetch Bname/pmCCCC    获取B的这个分支(前提是B已经提交到它自己的私人仓库,并且你有权限)
 
@@ -139,6 +149,9 @@ User C,
 4.git stash                 保存当前分支的修改到git缓存区
 
 5.git branch                查看当前本地的分支是否是master, 如果不是就切换过去git checkout master
+
+6.git fetch -u upstream/master 获取A的master最新的内容
+
 
 6.git branch pmBBBB.test    基于master在本地新建一个pmBBBB的分支
 
