@@ -42,9 +42,9 @@ function() {
     var isInit = false;
     var total = posts_urls.length;
     var processed = 0;
-    var a1 = 'test1';
-    var a2 = 'test2';
-    var a3 = 'test3';
+    var a1 = '112test1';
+    var a2 = '222test2';
+    var a3 = '333test3';
     $.each(posts_urls,
     function(_idx, _url) {
         $.get(_url,
