@@ -304,3 +304,21 @@ git fetch --tags upstream 获取远端所有tags
 git merge tag_name 
 git checkout tags/<tag_name>
 ```
+
+29..gitignore
+支持普通的shell语法过滤,不支持正则
+```
+# 此为注释 – 将被 Git 忽略
+# 忽略所有 .a 结尾的文件
+*.a
+# 但 lib.a 除外
+!lib.a
+# 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+/TODO
+# 忽略 build/ 目录下的所有文件
+build/
+# 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+doc/*.txt
+# ignore all .txt files in the doc/ directory
+doc/**/*.txt
+```
