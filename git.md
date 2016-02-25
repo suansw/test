@@ -41,24 +41,29 @@ git rev-parse --git-dir找到.git目录,里面有一个config文件
 
 ###Flow
 ---------
-1.获取服务器主分支代码(master)
-![https_or_ssh](https://raw.githubusercontent.com/0x58594C/test/dev/image/https_ssh.png "HTTP or SSH")
+####1.获取服务器主分支代码(master)
 ```
 https://github.com/0x58594C/test.git
 git@github.com:0x58594C/test.git
 ```
+![https_or_ssh](https://raw.githubusercontent.com/0x58594C/test/dev/image/https_ssh.png "HTTP or SSH")
 
-2.保存到自己的私有仓库(fork repository)
-![fork](https://raw.githubusercontent.com/0x58594C/test/dev/image/fork.png "Fork")
+
+####2.保存到自己的私有仓库(fork repository)
 ```
 click Fork 
 ```
-3.把代码下到本机
+![fork](https://raw.githubusercontent.com/0x58594C/test/dev/image/fork.png "Fork")
+
+####3.把代码下到本机
 ```
-git clone git@github.com:tommyx/project.git
+git clone git@github.com:0x58594C/test.git
 ```
-####为什么不用https的地址####https://github.com/shadowsocks/shadowsocks-libev.git ?
-4.有新的需求,ticket,bug需要修复
+
+#####为什么不用https的地址 https://github.com/0x58594C/test.git
+
+
+####4.有新的需求,ticket,bug需要修复
 ```
 git branch
 git branch -r
@@ -66,6 +71,7 @@ git checkout master 切换到master分支
 git branch ticketNo.someKeyWords 基于master分支建立一个新分支
 e.g.:  pm8888.fix.rack.ptu
 ```
+
 5.添加和修改文件
 ```
 git add filename
