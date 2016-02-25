@@ -113,8 +113,15 @@ github会在主仓库的pull request那里自动刷新你的本次提交
 ##Git Corporate
 --------
 ```
-User A branch, e.g.: pmAAAA
-User B branch, e.g.: pmBBBB
+User A,
+        name:rainysia
+        branch, e.g.: master, dev
+User B, 
+        name:x58594c
+        branch, e.g.: pmBBBB
+User C, 
+        name:suansw
+        branch, e.g.: pmCCCC
 如果A的branch依赖B的分支,但是最新的master里面并没有合并B的分支,A如何做集成开发测试
 ```
 1.git remote add Bname git@github.com:Bname/project.git 添加B的仓库地址到A本地
