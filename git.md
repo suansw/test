@@ -2,7 +2,7 @@ GIT
 ===========
 
 
-###Config
+##Config
 --------
 git rev-parse --git-dir找到.git目录,里面有一个config文件
 ```
@@ -39,22 +39,31 @@ git rev-parse --git-dir找到.git目录,里面有一个config文件
     default =  matching
 ```
 
-###Flow
+##Flow
 ---------
-1.获取服务器主分支代码(master)
+####1.获取服务器主分支代码(master)
 ```
-https://github.com/shadowsocks/shadowsocks-libev/
+https://github.com/0x58594C/test.git
+git@github.com:0x58594C/test.git
 ```
-2.保存到自己的私有仓库(fork repository)
+![https_or_ssh](https://raw.githubusercontent.com/0x58594C/test/dev/image/https_ssh.png "HTTP or SSH")
+
+
+####2.保存到自己的私有仓库(fork repository)
 ```
 click Fork 
 ```
-3.把代码下到本机
+![fork](https://raw.githubusercontent.com/0x58594C/test/dev/image/fork.png "Fork")
+
+####3.把代码下到本机
 ```
-git clone git@github.com:tommyx/project.git
+git clone git@github.com:0x58594C/test.git
 ```
-####为什么不用https的地址####https://github.com/shadowsocks/shadowsocks-libev.git ?
-4.有新的需求,ticket,bug需要修复
+
+#####为什么不用https的地址 https://github.com/0x58594C/test.git ?
+
+
+####4.有新的需求,ticket,bug需要修复
 ```
 git branch
 git branch -r
@@ -62,25 +71,30 @@ git checkout master 切换到master分支
 git branch ticketNo.someKeyWords 基于master分支建立一个新分支
 e.g.:  pm8888.fix.rack.ptu
 ```
-5.添加和修改文件
+
+####5.添加和修改文件
 ```
 git add filename
 git add .
 ```
-6.提交修改到本地缓存区
+
+####6.提交修改到本地缓存区
 ```
 git commit -a
 输入一些comments
 ```
-7.推送本地缓存区的修改集到自己的私有仓库
+
+####7.推送本地缓存区的修改集到自己的私有仓库
 ```
 git push origin pm8888.fix.rack.ptu:pm8888.fix.rack.ptu
 ```
-8.提交pull request
+
+####8.提交pull request
 ```
 点击Compare & review
 ```
-9.和服务器上的master有冲突
+
+####9.和服务器上的master有冲突
 ```
 git remote add upstream git@github.com:project.git  添加一个远程仓库到git的配置文件
 git fetch upstream/master   获取远程仓库的master分支的内容
@@ -96,11 +110,18 @@ git push origin pm8888      再次提交
 github会在主仓库的pull request那里自动刷新你的本次提交
 ```
 
-###Git Corporate
+##Git Corporate
 --------
 ```
-User A branch, e.g.: pmAAAA
-User B branch, e.g.: pmBBBB
+User A,
+        name:rainysia
+        branch, e.g.: master, dev
+User B, 
+        name:x58594c
+        branch, e.g.: pmBBBB
+User C, 
+        name:suansw
+        branch, e.g.: pmCCCC
 如果A的branch依赖B的分支,但是最新的master里面并没有合并B的分支,A如何做集成开发测试
 ```
 1.git remote add Bname git@github.com:Bname/project.git 添加B的仓库地址到A本地
@@ -131,7 +152,7 @@ User B branch, e.g.: pmBBBB
 
 12.git push origin pmAAAA
 
-###Basic Command
+##Basic Command
 ---------
 1.git config
 ```
@@ -282,4 +303,22 @@ git push origin --tags 可以推送本地所有tag
 git fetch --tags upstream 获取远端所有tags
 git merge tag_name 
 git checkout tags/<tag_name>
+```
+
+29..gitignore
+支持普通的shell语法过滤,不支持正则
+```
+# 此为注释 – 将被 Git 忽略
+# 忽略所有 .a 结尾的文件
+*.a
+# 但 lib.a 除外
+!lib.a
+# 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+/TODO
+# 忽略 build/ 目录下的所有文件
+build/
+# 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+doc/*.txt
+# ignore all .txt files in the doc/ directory
+doc/**/*.txt
 ```
