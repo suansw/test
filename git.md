@@ -113,32 +113,36 @@ github会在主仓库的pull request那里自动刷新你的本次提交
 ##Git Corporate
 --------
 ```
-User A,
+User A, project host
         name:x58594c
         branch, e.g.: master, dev
-        project host
+
 User B, 
         fork
         name:tommyx
         branch, e.g.: pmBBBB
+        branch, e,g,: pmBBBB.test
+
 User C, 
         fork
         name:suansw
         branch, e.g.: pmCCCC
-如果B的branch依赖C的分支,但是最新的master里面并没有合并C的分支,B如何做集成开发测试
+如果B的branch依赖C的分支,但是最新的A master里面并没有合并C的分支,B如何做集成开发测试
 ```
 1.git remote add Bname git@github.com:Cname/project.git 添加C的fork仓库地址到B本地
 ![git remote add](https://raw.githubusercontent.com/0x58594C/test/dev/image/git_remote_add.png "remote add")
 
-2.git fetch Bname/pmBBBB    获取B的这个分支(前提是B已经提交到它自己的私人仓库,并且你有权限)
+2.git fetch Bname/pmCCCC    获取B的这个分支(前提是B已经提交到它自己的私人仓库,并且你有权限)
 
 3.git status                查看当前分支是否有修改.
 
 4.git stash                 保存当前分支的修改到git缓存区
 
-5.git branch                查看当前本地的分支是否是pmAAAA, 如果不是就切换过去git checkout pmAAAA
+5.git branch                查看当前本地的分支是否是master, 如果不是就切换过去git checkout master
 
-6.git branch pmAAAA.test    基于pmAAAA在本地新建一个pmAAAA.test的分支
+6.git branch pmBBBB.test    基于master在本地新建一个pmBBBB的分支
+
+
 
 7.git merge Bname/pmBBBB    合并B的pmBBBB分支
 
