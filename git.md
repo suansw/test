@@ -51,7 +51,7 @@ click Fork
 ```
 3.把代码下到本机
 ```
-git clone git@hyvesolutions.com:tommyx/project.git
+git clone git@github.com:tommyx/project.git
 ```
 ####为什么不用https的地址####https://github.com/shadowsocks/shadowsocks-libev.git ?
 4.有新的需求,ticket,bug需要修复
@@ -82,7 +82,7 @@ git push origin pm8888.fix.rack.ptu:pm8888.fix.rack.ptu
 ```
 9.和服务器上的master有冲突
 ```
-git remote add upstream git@hyvesolutions.com:project.git  添加一个远程仓库到git的配置文件
+git remote add upstream git@github.com:project.git  添加一个远程仓库到git的配置文件
 git fetch upstream/master   获取远程仓库的master分支的内容
 git branch                  查看本地的当前分支
 git checkout master         切换到本地的master分支
@@ -103,7 +103,7 @@ User A branch, e.g.: pmAAAA
 User B branch, e.g.: pmBBBB
 如果A的branch依赖B的分支,但是最新的master里面并没有合并B的分支,A如何做集成开发测试
 ```
-1.git remote add Bname git@hyvesolutions.com:Bname/project.git 添加B的仓库地址到A本地
+1.git remote add Bname git@github.com:Bname/project.git 添加B的仓库地址到A本地
 
 2.git fetch Bname/pmBBBB    获取B的这个分支(前提是B已经提交到它自己的私人仓库,并且你有权限)
 
