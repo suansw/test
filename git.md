@@ -119,7 +119,7 @@ User A,
         project host
 User B, 
         fork
-        name:rainysia
+        name:tommyx
         branch, e.g.: pmBBBB
 User C, 
         fork
@@ -127,9 +127,8 @@ User C,
         branch, e.g.: pmCCCC
 如果B的branch依赖C的分支,但是最新的master里面并没有合并C的分支,B如何做集成开发测试
 ```
-1.git remote add Bname git@github.com:Bname/project.git 添加B的仓库地址到A本地
+1.git remote add Bname git@github.com:Cname/project.git 添加C的fork仓库地址到B本地
 ![git remote add](https://raw.githubusercontent.com/0x58594C/test/dev/image/git_remote_add.png "remote add")
-![git remote add2](https://raw.githubusercontent.com/0x58594C/test/dev/image/git_remote_add2.png "remote add2")
 
 2.git fetch Bname/pmBBBB    获取B的这个分支(前提是B已经提交到它自己的私人仓库,并且你有权限)
 
