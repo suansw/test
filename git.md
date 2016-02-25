@@ -2,7 +2,7 @@ GIT
 ===========
 
 
-###Config
+##Config
 --------
 git rev-parse --git-dir找到.git目录,里面有一个config文件
 ```
@@ -39,7 +39,7 @@ git rev-parse --git-dir找到.git目录,里面有一个config文件
     default =  matching
 ```
 
-###Flow
+##Flow
 ---------
 ####1.获取服务器主分支代码(master)
 ```
@@ -60,7 +60,7 @@ click Fork
 git clone git@github.com:0x58594C/test.git
 ```
 
-#####为什么不用https的地址 https://github.com/0x58594C/test.git
+#####为什么不用https的地址 https://github.com/0x58594C/test.git ?
 
 
 ####4.有新的需求,ticket,bug需要修复
@@ -72,25 +72,29 @@ git branch ticketNo.someKeyWords 基于master分支建立一个新分支
 e.g.:  pm8888.fix.rack.ptu
 ```
 
-5.添加和修改文件
+####5.添加和修改文件
 ```
 git add filename
 git add .
 ```
-6.提交修改到本地缓存区
+
+####6.提交修改到本地缓存区
 ```
 git commit -a
 输入一些comments
 ```
-7.推送本地缓存区的修改集到自己的私有仓库
+
+####7.推送本地缓存区的修改集到自己的私有仓库
 ```
 git push origin pm8888.fix.rack.ptu:pm8888.fix.rack.ptu
 ```
-8.提交pull request
+
+####8.提交pull request
 ```
 点击Compare & review
 ```
-9.和服务器上的master有冲突
+
+####9.和服务器上的master有冲突
 ```
 git remote add upstream git@github.com:project.git  添加一个远程仓库到git的配置文件
 git fetch upstream/master   获取远程仓库的master分支的内容
@@ -106,7 +110,7 @@ git push origin pm8888      再次提交
 github会在主仓库的pull request那里自动刷新你的本次提交
 ```
 
-###Git Corporate
+##Git Corporate
 --------
 ```
 User A branch, e.g.: pmAAAA
@@ -141,7 +145,7 @@ User B branch, e.g.: pmBBBB
 
 12.git push origin pmAAAA
 
-###Basic Command
+##Basic Command
 ---------
 1.git config
 ```
